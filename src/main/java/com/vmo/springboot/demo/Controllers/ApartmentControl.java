@@ -24,6 +24,7 @@ public class ApartmentControl {
     }
     @GetMapping("/apa/find")
     public List<Apartment> findAllCats() {
+
         return iApartmentservice.getall();
     }
 

@@ -10,4 +10,5 @@ public interface IGenericService<T> {
      public  String delete(int id);
     public List<T> getall();
     public T getone(int id);
+
 }

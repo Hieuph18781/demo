@@ -43,6 +43,6 @@ public class ApartmentSevice implements IGenericService<Apartment> {
 
     @Override
     public Apartment getone(int id) {
-        return iApartmentRepository.findById(id).orElse(null);
+        return iApartmentRepository.findById(id).get();
     }
 }
