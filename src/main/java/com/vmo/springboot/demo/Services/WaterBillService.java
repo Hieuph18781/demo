@@ -46,4 +46,11 @@ public class WaterBillService implements IGenericService<Water_Bill> {
     public Water_Bill getone(int id) {
         return iWater_billRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public Water_Bill getByIdApartment(Integer idy) {
+        return null;
+    }
+
+
 }

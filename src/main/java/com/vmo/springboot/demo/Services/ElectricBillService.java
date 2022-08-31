@@ -45,4 +45,11 @@ public class ElectricBillService implements IGenericService<Electric_Bill>{
     public Electric_Bill getone(int id) {
        return iElectric_billRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public Electric_Bill getByIdApartment(Integer idy) {
+        return null;
+    }
+
+
 }

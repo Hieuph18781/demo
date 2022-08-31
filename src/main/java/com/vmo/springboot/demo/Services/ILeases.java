@@ -8,11 +8,10 @@ import com.vmo.springboot.demo.Model.Tenant;
 import java.util.List;
 
 public interface ILeases {
-    public Leases add(Leases leases);
+    public Leases add(Leases leasesdto);
     public Leases update(Leases apartment);
     public  String delete(int id);
     public List<Leases> getall();
     public Leases getone(int id);
-    List<Leases> getAllProductByCategoryId(int id);
-    List<Leases> getAllProductById(int id);
+
 }

@@ -15,15 +15,16 @@ public class Leases {
     private Date date;
     private int status;
     private int price;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tenant_id",referencedColumnName = "tenant_id")
-    @JsonProperty("tenant_id")
-    Tenant tenant;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "apartment_id")
-    @JsonProperty("apartment_id")
-    Apartment apartment;
+    @ManyToOne(fetch = FetchType.EAGER)
 
+    @JoinColumn(name = "tenant_id",referencedColumnName = "tenant_id")
+
+    private Tenant tenant;
+    @ManyToOne(fetch = FetchType.EAGER)
+
+    @JoinColumn(name = "apartment_id")
+
+    private Apartment apartment;
 
     public Leases() {
     }
@@ -35,13 +36,6 @@ public class Leases {
         this.price = price;
         this.tenant = tenant;
         this.apartment = apartment;
-    }
-    public Leases(Date date, int status, int price, Apartment apartment, Tenant tenant) {
-        this.date = date;
-        this.status = status;
-        this.price = price;
-        this.apartment = apartment;
-        this.tenant = tenant;
     }
 
 
@@ -94,5 +88,15 @@ public class Leases {
         this.apartment = apartment;
     }
 
-
+    @Override
+    public String toString() {
+        return "Leases{" +
+                "id=" + id +
+                ", date=" + date +
+                ", status=" + status +
+                ", price=" + price +
+                ", tenant=" + tenant +
+                ", apartment=" + apartment +
+                '}';
+    }
 }

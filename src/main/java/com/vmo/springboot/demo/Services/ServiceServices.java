@@ -39,4 +39,11 @@ public class ServiceServices implements IGenericService<Service>{
     public Service getone(int id) {
         return iServiceRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public Service getByIdApartment(Integer idy) {
+        return null;
+    }
+
+
 }

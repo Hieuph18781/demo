@@ -4,8 +4,9 @@ import com.vmo.springboot.demo.Dto.LeasesDto;
 import com.vmo.springboot.demo.Model.Apartment;
 import com.vmo.springboot.demo.Model.Leases;
 import com.vmo.springboot.demo.Model.Tenant;
-import com.vmo.springboot.demo.Services.IGenericService;
+import com.vmo.springboot.demo.Services.ApartmentSevice;
 import com.vmo.springboot.demo.Services.ILeases;
+import com.vmo.springboot.demo.Services.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,17 +18,16 @@ public class LeasesControl {
     @Autowired
     ILeases iLeases;
     @Autowired
-    IGenericService<Apartment> iApartmentservice;
+    ApartmentSevice iApartmentservice;
     @Autowired
-    IGenericService<Tenant> iServicetenant;
-    int x;
+    TenantService iServicetenant;
+
     @PostMapping("/lea/add")
     public Leases addapart(@RequestBody Leases leases1){
-        return iLeases.add(leases1);
 
 
 
-
+        return  iLeases.add(leases1);
     }
 
     @GetMapping("/lea/find")

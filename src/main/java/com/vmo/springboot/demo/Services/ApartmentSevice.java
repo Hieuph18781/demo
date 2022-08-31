@@ -2,6 +2,8 @@ package com.vmo.springboot.demo.Services;
 
 import com.vmo.springboot.demo.Model.Apartment;
 import com.vmo.springboot.demo.Repositories.IApartmentRepository;
+import com.vmo.springboot.demo.Repositories.ILeasesRepository;
+import com.vmo.springboot.demo.Repositories.ITenantRepository;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,7 @@ import java.util.List;
 public class ApartmentSevice implements IGenericService<Apartment> {
     @Autowired
      IApartmentRepository iApartmentRepository;
+
     @Override
     public Apartment add(Apartment apartment) {
             return iApartmentRepository.save(apartment);
@@ -38,11 +41,17 @@ public class ApartmentSevice implements IGenericService<Apartment> {
 
     @Override
     public List<Apartment> getall() {
+
         return iApartmentRepository.findAll();
     }
 
     @Override
     public Apartment getone(int id) {
-        return iApartmentRepository.findById(id).get();
+        return this.iApartmentRepository.findById(id).orElse(null);
+    }
+    public Apartment getByIdApartment(Integer idy) {
+
+            return iApartmentRepository.findById(idy).get();
+
     }
 }

@@ -1,41 +1,34 @@
 package com.vmo.springboot.demo.Model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "apartment")
+
 public class Apartment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "apartment_id")
     private int id;
-    @Column(name = "name")
+
     private String name;
-    @Column(name = "status")
+
     private int status;
-    @Column(name = "arena")
+
     private int arena;
-    @Column(name = "bedroom")
+
     private int bedroom;
-    @Column(name = "bathroom")
+
     private int bathroom;
-    @Column(name = "image")
+
     private String image;
-    @Column(name = "price")
+
     private int price;
 
     public Apartment() {
-    }
-
-    public Apartment(int id, String name, int status, int arena, int bedroom, int bathroom, String image, int price) {
-        this.id = id;
-        this.name = name;
-        this.status = status;
-        this.arena = arena;
-        this.bedroom = bedroom;
-        this.bathroom = bathroom;
-        this.image = image;
-        this.price = price;
     }
 
     public int getId() {
@@ -99,6 +92,17 @@ public class Apartment {
     }
 
     public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public Apartment(int id, String name, int status, int arena, int bedroom, int bathroom, String image, int price) {
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.arena = arena;
+        this.bedroom = bedroom;
+        this.bathroom = bathroom;
+        this.image = image;
         this.price = price;
     }
 }

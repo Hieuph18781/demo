@@ -30,7 +30,7 @@ public class ApartmentControl {
 
     @GetMapping("/apa/{id}")
     public Apartment findtById(@PathVariable int id) {
-        return iApartmentservice.getone(id);
+        return new Apartment();
     }
 
     @PutMapping("/apa/update")

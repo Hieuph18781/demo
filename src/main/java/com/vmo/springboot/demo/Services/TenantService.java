@@ -45,6 +45,19 @@ public class TenantService implements IGenericService<Tenant> {
 
     @Override
     public Tenant getone(int id) {
-        return iTenantRepository.findById(id).get();
+
+        return iTenantRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public Tenant getByIdApartment(Integer idy) {
+        return iTenantRepository.findById(idy).get();
+    }
+
+//    public Tenant getByIdApartment1(Integer id) {
+//        if (iTenantRepository.findById(id).isPresent()) {
+//            return iTenantRepository.findById(id).get();
+//        }
+//        return null;
+//    }
 }

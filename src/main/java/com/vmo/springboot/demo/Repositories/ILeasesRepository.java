@@ -1,5 +1,6 @@
 package com.vmo.springboot.demo.Repositories;
 
+import com.vmo.springboot.demo.Dto.LeasesDto;
 import com.vmo.springboot.demo.Model.Apartment;
 import com.vmo.springboot.demo.Model.Leases;
 import com.vmo.springboot.demo.Model.Tenant;
@@ -13,6 +14,5 @@ import java.util.List;
 @Repository
 public interface ILeasesRepository extends JpaRepository<Leases, Integer> {
 
-    List<Leases> findAllByApartment_Id(int id);
-    List<Leases> findAllByTenant_Id(int id);
+
 }

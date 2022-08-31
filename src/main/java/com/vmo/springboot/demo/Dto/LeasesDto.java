@@ -11,12 +11,12 @@ public class LeasesDto {
 
     private int price;
 
-    @JsonProperty("apartment_id")
-    private Integer apartmentId;
+
 
     @JsonProperty("tenant_id")
     private Integer tenantId;
-
+    @JsonProperty("apartment_id")
+    private Integer apartmentId;
     public LeasesDto() {
     }
 
@@ -66,5 +66,16 @@ public class LeasesDto {
 
     public void setTenantId(Integer tenantId) {
         this.tenantId = tenantId;
+    }
+
+    @Override
+    public String toString() {
+        return "LeasesDto{" +
+                "date=" + date +
+                ", status=" + status +
+                ", price=" + price +
+                ", apartmentId=" + apartmentId +
+                ", tenantId=" + tenantId +
+                '}';
     }
 }
