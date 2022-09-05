@@ -1,19 +1,36 @@
 package com.vmo.springboot.demo.Services;
 
+import com.vmo.springboot.demo.Controllers.receivable_serControll;
 import com.vmo.springboot.demo.Model.receivable_sevice;
 import com.vmo.springboot.demo.Repositories.IReceivable_serviceRepository;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.jetbrains.annotations.NotNull;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+
 @Service
 public class receivablar_serviService implements IGenericService<receivable_sevice>{
     @Autowired
     IReceivable_serviceRepository  iReceivable_serviceRepository;
+   private static final Logger loger =  LoggerFactory.getLogger(receivablar_serviService.class);
     @Override
     public receivable_sevice add(receivable_sevice apartment) {
-        return iReceivable_serviceRepository.save(apartment);
+        try {
+             iReceivable_serviceRepository.save(apartment);
+            loger.info("hihi"+apartment);
+        }
+        catch (Exception e){
+            loger.error("lỗi rồi");
+        }
+        return apartment;
     }
 
     @Override
