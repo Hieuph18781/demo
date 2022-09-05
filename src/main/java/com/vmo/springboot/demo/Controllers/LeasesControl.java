@@ -39,14 +39,14 @@ public class LeasesControl {
    public Leases findtById(@PathVariable int id) {
         return new Leases();
     }
-//
-//    @PutMapping("/lea/update")
-//    public Leases updateProduct(@RequestBody Leases apartment) {
-//        return iLeasesServices.update(apartment);
-//    }
-//
-//    @DeleteMapping("/lea/delete/{id}")
-//    public String deleteCat(@PathVariable int id) {
-//        return iLeasesServices.delete(id);
-//    }
+
+    @PutMapping("/lea/update")
+    public Leases updateProduct(@RequestBody Leases apartment) {
+        return iLeases.update(apartment);
+    }
+
+    @DeleteMapping("/lea/delete/{id}")
+    public String deleteCat(@PathVariable int id) {
+        return iLeases.delete(id);
+    }
 }

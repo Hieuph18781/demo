@@ -28,12 +28,19 @@ public class LeasesService implements ILeases {
 
     @Override
     public Leases update(Leases apartment) {
-        return null;
+         Leases existing = iLeasesRepository.findById(apartment.getId()).orElse(null);
+        existing.setDate(apartment.getDate());
+        existing.setPrice(apartment.getPrice());
+        existing.setStatus(apartment.getStatus());
+        existing.setApartment(apartment.getApartment());
+        existing.setTenant(apartment.getTenant());
+        return iLeasesRepository.save(existing);
     }
 
     @Override
     public String delete(int id) {
-        return null;
+       iLeasesRepository.deleteById(id);
+       return " removed ??" + id;
     }
 
     @Override

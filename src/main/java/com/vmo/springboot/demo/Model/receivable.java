@@ -14,13 +14,13 @@ public class receivable {
     private Date create_at;
     private Date update_at;
     private int status;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "electricbill_id",referencedColumnName = "electricbill_id")
     Electric_Bill electricBill;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "waterbill_id",referencedColumnName = "waterbill_id")
     Water_Bill waterBill;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "leases_id",referencedColumnName = "leases_id")
     Leases leases;
 

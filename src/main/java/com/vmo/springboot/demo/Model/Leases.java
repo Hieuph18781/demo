@@ -88,15 +88,5 @@ public class Leases {
         this.apartment = apartment;
     }
 
-    @Override
-    public String toString() {
-        return "Leases{" +
-                "id=" + id +
-                ", date=" + date +
-                ", status=" + status +
-                ", price=" + price +
-                ", tenant=" + tenant +
-                ", apartment=" + apartment +
-                '}';
-    }
+
 }
