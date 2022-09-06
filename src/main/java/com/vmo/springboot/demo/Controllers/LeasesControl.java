@@ -24,9 +24,6 @@ public class LeasesControl {
 
     @PostMapping("/lea/add")
     public Leases addapart(@RequestBody Leases leases1){
-
-
-
         return  iLeases.add(leases1);
     }
 
