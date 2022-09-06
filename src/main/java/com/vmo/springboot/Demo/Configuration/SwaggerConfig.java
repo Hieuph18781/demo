@@ -1,4 +1,4 @@
-package com.vmo.springboot.Demo;
+package com.vmo.springboot.Demo.Configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableWebMvc
 public class SwaggerConfig implements WebMvcConfigurer {
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
@@ -28,6 +29,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
+
     @Bean
     public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2)
@@ -36,6 +38,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .apis(RequestHandlerSelectors.basePackage("com.vmo.springboot.demo"))
                 .build();
     }
+
     private ApiInfo apiInfoMetaData() {
 
         return new ApiInfoBuilder().title("NAME OF SERVICE")

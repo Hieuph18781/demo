@@ -18,7 +18,9 @@ import java.util.List;
 public class receivablarServiService implements IGenericService<ReceivableSevice> {
     @Autowired
     IReceivableServiceRepository iReceivable_serviceRepository;
+
    private static final Logger loger =  LoggerFactory.getLogger(receivablarServiService.class);
+
     @Override
     public ReceivableSevice add(ReceivableSevice apartment) {
         try {

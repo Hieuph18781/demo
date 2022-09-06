@@ -27,20 +27,24 @@ public class ReceivableController {
         return  receivableService.add(leases1);
     }
 
+
     @GetMapping("/rec/find")
     public List<receivable> findAllCats() {
         return receivableService.getall();
     }
+
 
     @GetMapping("/rec/{id}")
     public receivable findtById(@PathVariable int id) {
         return new receivable();
     }
 
+
     @PutMapping("/rec/update")
     public receivable updateProduct(@RequestBody receivable apartment) {
         return receivableService.update(apartment);
     }
+
 
     @DeleteMapping("/rec/delete/{id}")
     public String deleteCat(@PathVariable int id) {

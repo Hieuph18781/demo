@@ -11,20 +11,24 @@ import java.util.List;
 public class ElectricController {
     @Autowired
     IGenericService<ElectricBill> iElectricServices;
+
     @PostMapping("/elec/add")
     public ElectricBill addapart(@RequestBody ElectricBill apartment){
         return  iElectricServices.add(apartment);
     }
+
 
     @GetMapping("/elec/find")
     public List<ElectricBill> findAllCats() {
         return iElectricServices.getall();
     }
 
+
     @GetMapping("/elec/{id}")
     public ElectricBill findtById(@PathVariable int id) {
         return new ElectricBill();
     }
+
 
     @PutMapping("/elec/update")
     public ElectricBill updateProduct(@RequestBody ElectricBill apartment) {

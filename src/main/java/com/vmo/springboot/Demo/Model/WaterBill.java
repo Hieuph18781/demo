@@ -11,11 +11,17 @@ public class WaterBill {
     private int id;
 
     private String name;
+
     private Date createW;
+
     private Date updateW;
+
     private int oldBillW;
+
     private int newBillW;
+
     private int unit;
+
     private int status;
 
 
@@ -38,17 +44,21 @@ public class WaterBill {
         this.name = name;
     }
 
+
     public Date getCreateW() {
         return createW;
     }
+
 
     public void setCreateW(Date createW) {
         this.createW = createW;
     }
 
+
     public Date getUpdateW() {
         return updateW;
     }
+
 
     public void setUpdateW(Date updateW) {
         this.updateW = updateW;

@@ -16,7 +16,6 @@ public class ApartmentSevice implements IGenericService<Apartment> {
     @Override
     public Apartment add(Apartment apartment) {
             return iApartmentRepository.save(apartment);
-
     }
 
     @Override
@@ -48,6 +47,7 @@ public class ApartmentSevice implements IGenericService<Apartment> {
     public Apartment getone(int id) {
         return this.iApartmentRepository.findById(id).orElse(null);
     }
+
     public Apartment getByIdApartment(Integer idy) {
 
             return iApartmentRepository.findById(idy).get();

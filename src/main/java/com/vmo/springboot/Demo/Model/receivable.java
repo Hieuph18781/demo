@@ -14,12 +14,15 @@ public class receivable {
     private Date create_at;
     private Date update_at;
     private int status;
+
     @ManyToOne()
     @JoinColumn(name = "electricbill_id",referencedColumnName = "electricbill_id")
     ElectricBill electricBill;
+
     @ManyToOne()
     @JoinColumn(name = "waterbill_id",referencedColumnName = "waterbill_id")
     WaterBill waterBill;
+
     @ManyToOne()
     @JoinColumn(name = "leases_id",referencedColumnName = "leases_id")
     Leases leases;

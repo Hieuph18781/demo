@@ -9,19 +9,21 @@ public class Leases {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "leases_id")
+
     private int id;
+
     private Date date;
+
     private int status;
+
     private int price;
-    @ManyToOne(fetch = FetchType.EAGER)
 
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tenant_id",referencedColumnName = "tenant_id")
-
     private Tenant tenant;
+
     @ManyToOne(fetch = FetchType.EAGER)
-
     @JoinColumn(name = "apartment_id")
-
     private Apartment apartment;
 
     public Leases() {

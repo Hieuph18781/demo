@@ -32,15 +32,18 @@ public class ReceivableSerController {
         return iGenericServicell.getall();
     }
 
+
     @GetMapping("/recse/{id}")
     public ReceivableSevice findtById(@PathVariable int id) {
         return new ReceivableSevice();
     }
 
+
     @PutMapping("/recse/update")
     public ReceivableSevice updateProduct(@RequestBody ReceivableSevice apartment) {
         return iGenericServicell.update(apartment);
     }
+
 
     @DeleteMapping("/recse/delete/{id}")
     public String deleteCat(@PathVariable int id) {

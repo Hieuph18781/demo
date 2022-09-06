@@ -10,6 +10,7 @@ import java.util.List;
 public class ServiceOtherServices implements IGenericService<ServiceOther> {
     @Autowired
     IServiceRepository iServiceRepository;
+
     @Override
     public ServiceOther add(ServiceOther apartment) {
         return iServiceRepository.save(apartment);

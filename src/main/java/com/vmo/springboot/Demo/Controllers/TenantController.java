@@ -12,10 +12,12 @@ import java.util.List;
 public class TenantController {
     @Autowired
     IGenericService<Tenant> iServicetenant;
+
     @PostMapping("/ten/add")
     public Tenant addapart(@RequestBody Tenant apartment){
         return  iServicetenant.add(apartment);
     }
+
     @GetMapping("/ten/find")
     public List<Tenant> findAllCats() {
         return iServicetenant.getall();

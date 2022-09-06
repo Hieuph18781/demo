@@ -10,20 +10,28 @@ public class Tenant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tenant_id")
     private int id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "email")
     private String email;
+
     @Column(name = "age")
     private int age;
+
     @Column(name = "dob")
     private Date dob;
+
     @Column(name = "phone")
     private String phone;
+
     @Column(name = "gender")
     private int gender;
+
     @Column(name = "id_cart")
     private String id_cart;
+
     @Column(name = "status")
     private int status;
 

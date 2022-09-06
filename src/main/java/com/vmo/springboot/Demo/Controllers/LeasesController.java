@@ -29,15 +29,18 @@ public class LeasesController {
         return iLeases.getall();
     }
 
+
    @GetMapping("/lea/{id}")
    public Leases findtById(@PathVariable int id) {
         return new Leases();
     }
 
+
     @PutMapping("/lea/update")
     public Leases updateProduct(@RequestBody Leases apartment) {
         return iLeases.update(apartment);
     }
+
 
     @DeleteMapping("/lea/delete/{id}")
     public String deleteCat(@PathVariable int id) {

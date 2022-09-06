@@ -10,8 +10,10 @@ import java.util.List;
 
 @Service
 public class WaterBillService implements IGenericService<WaterBill> {
+
     @Autowired
     IWaterBillRepository iWater_billRepository;
+
     @Override
     public WaterBill add(WaterBill apartment) {
         return iWater_billRepository.save(apartment);

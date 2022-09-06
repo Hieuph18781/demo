@@ -22,6 +22,7 @@ public class ApartmentController {
     public Apartment addapart(@RequestBody Apartment apartment){
         return  iApartmentservice.add(apartment);
     }
+
     @GetMapping("/apa/find")
     public List<Apartment> findAllCats() {
 
@@ -32,6 +33,7 @@ public class ApartmentController {
     public Apartment findtById(@PathVariable int id) {
         return new Apartment();
     }
+
 
     @PutMapping("/apa/update")
     public Apartment updateProduct(@RequestBody Apartment apartment) {

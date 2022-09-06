@@ -9,9 +9,11 @@ public class ReceivableSevice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = ("receivablesevice_id"))
     private int id;
+
     @ManyToOne
     @JoinColumn(name = "service_id",referencedColumnName = "service_id")
     ServiceOther serviceOther;
+
     @ManyToOne
     @JoinColumn(name = "receivable_id",referencedColumnName = "receivable_id")
     receivable receivable;

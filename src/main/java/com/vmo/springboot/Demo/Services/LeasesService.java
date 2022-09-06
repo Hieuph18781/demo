@@ -17,7 +17,6 @@ public class LeasesService implements ILeases {
     @Autowired
     ITenantRepository iTenantRepository;
 
-
     @Override
     public Leases add(Leases leasesdto) {
             return iLeasesRepository.save(leasesdto);
@@ -49,8 +48,5 @@ public class LeasesService implements ILeases {
     public Leases getone(int id) {
         return iLeasesRepository.findById(id).get();
     }
-
-
-
 
 }
