@@ -4,6 +4,7 @@ import com.vmo.springboot.Demo.Model.ReceivableSevice;
 import com.vmo.springboot.Demo.Repositories.IReceivableServiceRepository;
 
 
+import com.vmo.springboot.Demo.Services.Interface.IGenericService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.List;
 
 
 @Service
-public class receivablarServiService implements IGenericService<ReceivableSevice>{
+public class receivablarServiService implements IGenericService<ReceivableSevice> {
     @Autowired
     IReceivableServiceRepository iReceivable_serviceRepository;
    private static final Logger loger =  LoggerFactory.getLogger(receivablarServiService.class);

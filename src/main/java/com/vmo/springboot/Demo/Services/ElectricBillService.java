@@ -2,13 +2,14 @@ package com.vmo.springboot.Demo.Services;
 
 import com.vmo.springboot.Demo.Model.ElectricBill;
 import com.vmo.springboot.Demo.Repositories.IElectricBillRepository;
+import com.vmo.springboot.Demo.Services.Interface.IGenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ElectricBillService implements IGenericService<ElectricBill>{
+public class ElectricBillService implements IGenericService<ElectricBill> {
     @Autowired
     IElectricBillRepository iElectric_billRepository;
     @Override

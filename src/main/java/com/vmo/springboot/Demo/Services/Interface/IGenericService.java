@@ -1,4 +1,4 @@
-package com.vmo.springboot.Demo.Services;
+package com.vmo.springboot.Demo.Services.Interface;
 
 import java.util.List;
 

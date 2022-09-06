@@ -2,7 +2,7 @@ package com.vmo.springboot.Demo.Controllers;
 
 import com.vmo.springboot.Demo.Model.Leases;
 import com.vmo.springboot.Demo.Services.ApartmentSevice;
-import com.vmo.springboot.Demo.Services.ILeases;
+import com.vmo.springboot.Demo.Services.Interface.ILeases;
 import com.vmo.springboot.Demo.Services.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

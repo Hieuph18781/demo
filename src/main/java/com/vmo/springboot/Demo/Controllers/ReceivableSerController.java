@@ -1,7 +1,7 @@
 package com.vmo.springboot.Demo.Controllers;
 
 import com.vmo.springboot.Demo.Model.ReceivableSevice;
-import com.vmo.springboot.Demo.Services.IGenericService;
+import com.vmo.springboot.Demo.Services.Interface.IGenericService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

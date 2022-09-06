@@ -2,13 +2,14 @@ package com.vmo.springboot.Demo.Services;
 
 import com.vmo.springboot.Demo.Model.receivable;
 import com.vmo.springboot.Demo.Repositories.IReceivableRepository;
+import com.vmo.springboot.Demo.Services.Interface.IGenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ReceivableService implements IGenericService<receivable>  {
+public class ReceivableService implements IGenericService<receivable> {
     @Autowired
     IReceivableRepository iReceivableRepository;
 

@@ -3,7 +3,7 @@ package com.vmo.springboot.Demo.Controllers;
 
 import com.vmo.springboot.Demo.Model.Apartment;
 
-import com.vmo.springboot.Demo.Services.IGenericService;
+import com.vmo.springboot.Demo.Services.Interface.IGenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;

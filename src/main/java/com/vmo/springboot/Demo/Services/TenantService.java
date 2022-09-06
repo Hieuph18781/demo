@@ -2,6 +2,7 @@ package com.vmo.springboot.Demo.Services;
 
 import com.vmo.springboot.Demo.Model.Tenant;
 import com.vmo.springboot.Demo.Repositories.ITenantRepository;
+import com.vmo.springboot.Demo.Services.Interface.IGenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

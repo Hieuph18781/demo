@@ -42,7 +42,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .description("API Endpoint Decoration")
                 .contact(new Contact("Dev-Team", "https://www.hieu.com/", "veins1103@gmail.com"))
                 .license("Apache 2.0")
-                .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0.html")
+                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .version("1.1.0")
                 .build();
     }

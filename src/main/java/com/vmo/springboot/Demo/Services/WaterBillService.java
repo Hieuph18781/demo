@@ -2,6 +2,7 @@ package com.vmo.springboot.Demo.Services;
 
 import com.vmo.springboot.Demo.Model.WaterBill;
 import com.vmo.springboot.Demo.Repositories.IWaterBillRepository;
+import com.vmo.springboot.Demo.Services.Interface.IGenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
