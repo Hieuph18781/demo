@@ -2,9 +2,9 @@ package com.vmo.springboot.Demo.Services;
 
 import com.vmo.springboot.Demo.Model.User;
 import com.vmo.springboot.Demo.Repositories.UserRepository;
-import com.vmo.springboot.Demo.Services.Interface.UserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 

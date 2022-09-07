@@ -38,12 +38,16 @@ public class AuthController {
         UserRepository userRepository;
         @Autowired
         RoleRepository roleRepository;
+
         @Autowired
         PasswordEncoder encoder;
+
         @Autowired
         JwtUtils jwtUtils;
+
         @PostMapping("/signin")
         public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+                //return ResponseEntity.ok(loginRequest);
         Authentication authentication = authenticationManager.authenticate(
         new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -59,8 +63,13 @@ public class AuthController {
         userDetails.getEmail(),
         roles));
         }
+
+
 @PostMapping("/signup")
 public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+        System.out.println(signUpRequest);
+        //return ResponseEntity.ok(signUpRequest);
+
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
         return ResponseEntity
         .badRequest()
