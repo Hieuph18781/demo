@@ -1,5 +1,6 @@
 package com.vmo.springboot.Demo;
 
+import com.vmo.springboot.Demo.Configuration.SwaggerConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -9,6 +10,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
-//            new SwaggerConfig();
+            //new SwaggerConfig();
     }
 }

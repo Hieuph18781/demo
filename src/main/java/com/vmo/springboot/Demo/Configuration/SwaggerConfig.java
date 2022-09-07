@@ -35,7 +35,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfoMetaData())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.vmo.springboot.demo"))
+                .apis(RequestHandlerSelectors.basePackage("com.vmo.springboot.Demo"))
                 .build();
     }
 
