@@ -1,9 +1,9 @@
 package com.vmo.springboot.Demo.Controllers;
 
 import com.vmo.springboot.Demo.Model.Leases;
-import com.vmo.springboot.Demo.Services.ApartmentSevice;
+import com.vmo.springboot.Demo.Services.ApartmentSeviceImpl;
 import com.vmo.springboot.Demo.Services.Interface.ILeases;
-import com.vmo.springboot.Demo.Services.TenantService;
+import com.vmo.springboot.Demo.Services.TenantServiceIpml;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,9 +15,9 @@ public class LeasesController {
     @Autowired
     ILeases iLeases;
     @Autowired
-    ApartmentSevice iApartmentservice;
+    ApartmentSeviceImpl iApartmentservice;
     @Autowired
-    TenantService iServicetenant;
+    TenantServiceIpml iServicetenant;
 
     @PostMapping("/lea/add")
     public Leases addapart(@RequestBody Leases leases1){

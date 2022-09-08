@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TenantService implements IGenericService<Tenant> {
+public class TenantServiceIpml implements IGenericService<Tenant> {
     @Autowired
     ITenantRepository iTenantRepository;
 

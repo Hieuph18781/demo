@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ElectricBillService implements IGenericService<ElectricBill> {
+public class ElectricBillServiceIpml implements IGenericService<ElectricBill> {
 
     @Autowired
     IElectricBillRepository iElectric_billRepository;

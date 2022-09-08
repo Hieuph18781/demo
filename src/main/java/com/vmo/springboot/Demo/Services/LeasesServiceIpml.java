@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class LeasesService implements ILeases {
+public class LeasesServiceIpml implements ILeases {
     @Autowired
     ILeasesRepository iLeasesRepository;
 

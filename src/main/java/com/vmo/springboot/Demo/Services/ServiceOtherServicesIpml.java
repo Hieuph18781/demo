@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 @org.springframework.stereotype.Service
-public class ServiceOtherServices implements IGenericService<ServiceOther> {
+public class ServiceOtherServicesIpml implements IGenericService<ServiceOther> {
     @Autowired
     IServiceRepository iServiceRepository;
 

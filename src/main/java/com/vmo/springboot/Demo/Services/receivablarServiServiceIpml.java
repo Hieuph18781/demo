@@ -15,11 +15,11 @@ import java.util.List;
 
 
 @Service
-public class receivablarServiService implements IGenericService<ReceivableSevice> {
+public class receivablarServiServiceIpml implements IGenericService<ReceivableSevice> {
     @Autowired
     IReceivableServiceRepository iReceivable_serviceRepository;
 
-   private static final Logger loger =  LoggerFactory.getLogger(receivablarServiService.class);
+   private static final Logger loger =  LoggerFactory.getLogger(receivablarServiServiceIpml.class);
 
     @Override
     public ReceivableSevice add(ReceivableSevice apartment) {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ReceivableService implements IGenericService<receivable> {
+public class ReceivableServiceIpml implements IGenericService<receivable> {
     @Autowired
     IReceivableRepository iReceivableRepository;
 

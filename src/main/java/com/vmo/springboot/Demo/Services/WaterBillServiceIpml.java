@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class WaterBillService implements IGenericService<WaterBill> {
+public class WaterBillServiceIpml implements IGenericService<WaterBill> {
 
     @Autowired
     IWaterBillRepository iWater_billRepository;

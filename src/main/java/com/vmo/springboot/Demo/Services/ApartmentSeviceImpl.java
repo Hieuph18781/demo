@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class ApartmentSevice implements IGenericService<Apartment> {
+public class ApartmentSeviceImpl implements IGenericService<Apartment> {
     @Autowired
      IApartmentRepository iApartmentRepository;
 
